@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in); 
+        System.out.print("Please enter your first number:");
+        String numOne = scanner.nextLine();
+        double expected = Double.parseDouble(numOne);
+
+        int number = 1;
+
+        String F = "";
+        String D = "";
+        String C = "";
+        String B = "";
+        String A = "";
+
+        while (number <= expected){
+            System.out.print("Enter the grade value: ");
+        String numTwo = scanner.nextLine();
+        double grade = Double.parseDouble(numTwo); 
+
+        if (grade > -1 && grade < 50){ 
+        F = F + "*";
+        number = number + 1;
+        }
+    if (grade > 49 && grade < 60){
+        D = D + "*";
+        number = number + 1;
+     }
+    if (grade > 59 && grade < 70){
+        C = C + "*";
+        number = number + 1;
+    }
+    if (grade > 69 && grade < 80){
+        B = B + "*";
+        number = number + 1;
+    }
+    if (grade > 79 && grade < 101){
+        A = A + "*";
+        number = number + 1;
+        }
+    }
+    System.out.println("F:" + F);
+    System.out.println("D:" + D);
+    System.out.println("C:" + C);
+    System.out.println("B:" + B);
+    System.out.println("A:" + A);
+
+    scanner.close();
+    }
+}
